@@ -1,7 +1,3 @@
-from django.contrib.auth.models import AbstractUser
-from django.db import models
+from django.contrib import admin
 
-
-class User(AbstractUser):
-    """Модель пользователя"""
-    pass
+# Register your models here.
