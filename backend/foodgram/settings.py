@@ -1,6 +1,6 @@
+from dotenv import load_dotenv
 import os
 from pathlib import Path
-from dotenv import load_dotenv
 
 # Virtual Environment
 load_dotenv()
@@ -32,6 +32,8 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'djoser',
     'django_filters',
+    'corsheaders',
+    'colorfield',
 ]
 
 MIDDLEWARE = [
