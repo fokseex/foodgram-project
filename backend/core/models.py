@@ -56,7 +56,7 @@ class Tag(models.Model):
 
 
 class Recipe(models.Model):
-    """ Модель рецептов. """
+    """ Модель рецептов"""
     author = models.ForeignKey(
         User,
         on_delete=models.CASCADE,
@@ -131,7 +131,7 @@ class IngredientRecipe(models.Model):
 
 
 class ShoppingCart(models.Model):
-    """ Модель списка покупок. """
+    """Модель списка покупок"""
     user = models.ForeignKey(
         User,
         on_delete=models.CASCADE,
@@ -157,7 +157,7 @@ class ShoppingCart(models.Model):
 
 
 class Favorite(models.Model):
-    """ Модель добавление в избраное. """
+    """Модель добавление в избраное"""
     user = models.ForeignKey(
         User,
         on_delete=models.CASCADE,
