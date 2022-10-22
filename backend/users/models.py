@@ -30,10 +30,10 @@ class User(AbstractUser):
     )
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ['username', 'first_name', 'last_name']
+    REQUIRED_FIELDS = ('username', 'first_name', 'last_name',)
 
     class Meta:
-        ordering = ['-pk']
+        ordering = ('-pk',)
         verbose_name = 'Пользователь'
         verbose_name_plural = 'Пользователи'
 
