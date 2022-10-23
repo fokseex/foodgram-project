@@ -1,3 +1,5 @@
+from core.models import (Favorite, Ingredient, IngredientRecipe, Recipe,
+                         ShoppingCart, Tag)
 from django.db import transaction
 from django.shortcuts import get_object_or_404
 from djoser.serializers import UserCreateSerializer, UserSerializer
@@ -7,9 +9,6 @@ from rest_framework.exceptions import ValidationError
 from rest_framework.fields import SerializerMethodField
 from rest_framework.relations import PrimaryKeyRelatedField
 from rest_framework.serializers import ModelSerializer
-
-from core.models import (Favorite, Ingredient, IngredientRecipe, Recipe,
-                         ShoppingCart, Tag)
 from users.models import Follow, User
 
 COOKING_TIME_MIN_VALUE = 1
