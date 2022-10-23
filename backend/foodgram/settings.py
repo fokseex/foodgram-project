@@ -14,7 +14,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv("DJ_SECRET_KEY")
 
 # Host & debug
-DEBUG = True
+DEBUG = False
 ALLOWED_HOSTS = ['*']
 
 # Application definition
@@ -118,7 +118,8 @@ USE_TZ = True
 # Cors settings
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_URLS_REGEX = r'^/api/.*$'
-# CORS_ALLOWED_ORIGINS = ['http://localhost:3000',]
+# CORS_ALLOWED_ORIGINS = ['http://localhost:3000', 'http://localhost:8000',
+#                         'http://localhost',]
 
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
