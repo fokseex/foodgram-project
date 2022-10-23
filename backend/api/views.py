@@ -11,9 +11,10 @@ from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.status import HTTP_400_BAD_REQUEST
 
-from users.models import Follow, User
 from core.models import (Favorite, Ingredient, IngredientRecipe, Recipe,
                          ShoppingCart, Tag)
+from users.models import Follow, User
+
 from .filters import IngredientFilter, RecipeFilter
 from .pagination import CustomPagination
 from .permissions import IsAuthorOrAdminOrReadOnly
