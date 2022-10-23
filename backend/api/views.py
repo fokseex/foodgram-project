@@ -10,9 +10,6 @@ from rest_framework.decorators import action
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.status import HTTP_400_BAD_REQUEST
-from core.models import (Favorite, Ingredient, IngredientRecipe, Recipe,
-                         ShoppingCart, Tag)
-from users.models import Follow, User
 
 from .filters import IngredientFilter, RecipeFilter
 from .pagination import CustomPagination
@@ -21,6 +18,9 @@ from .serializers import (CreateRecipeSerializer, FavoriteSerializer,
                           FollowListSerializer, FollowSerializer,
                           IngredientSerializer, RecipeSerializer,
                           ShoppingCartSerializer, TagSerializer)
+from core.models import (Favorite, Ingredient, IngredientRecipe, Recipe,
+                         ShoppingCart, Tag)
+from users.models import Follow, User
 
 
 class UsersViewSet(UserViewSet):
