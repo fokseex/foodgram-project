@@ -10,7 +10,6 @@ from rest_framework.decorators import action
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.status import HTTP_400_BAD_REQUEST
-
 from core.models import (Favorite, Ingredient, IngredientRecipe, Recipe,
                          ShoppingCart, Tag)
 from users.models import Follow, User
