@@ -117,10 +117,9 @@ USE_L10N = True
 USE_TZ = True
 
 # Cors settings
-CORS_ORIGIN_ALLOW_ALL = True
-CORS_URLS_REGEX = r'^/api/.*$'
-# CORS_ALLOWED_ORIGINS = ['http://localhost:3000', 'http://localhost:8000',
-#                         'http://localhost',]
+# CORS_ORIGIN_ALLOW_ALL = True
+# CORS_URLS_REGEX = r'^/api/.*$'
+CORS_ALLOWED_ORIGINS = ['http://178.154.229.113:3000']
 
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
