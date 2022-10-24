@@ -11,7 +11,7 @@ load_dotenv(dotenv_path=env_path)
 # Build paths and key
 BASE_DIR = Path(__file__).resolve().parent.parent
 # BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SECRET_KEY = os.getenv("DJ_SECRET_KEY")
+SECRET_KEY = 'django-insecure--0_#_l2mb#ika8rfb3bt8n*x8bo(w_67fu(w-!k2ldkl!x(bti'
 
 # Host & debug
 DEBUG = False
