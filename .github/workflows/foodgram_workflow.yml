@@ -43,7 +43,7 @@ jobs:
           context: ./backend
           file: ./backend/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/foodgarm_backend:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/foodgram_backend:latest
 
   deploy:
     runs-on: ubuntu-latest
@@ -59,9 +59,9 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
             sudo docker pull ${{ secrets.DOCKER_USERNAME 
-            }}/foodgarm_frontend:v1.0.0
+            }}/foodgram_frontend:v1.0.0
             sudo docker pull ${{ secrets.DOCKER_USERNAME 
-            }}foodgarm_backend:latest
+            }}foodgram_backend:latest
             sudo docker-compose stop
             sudo docker-compose rm backend
             rm .env
