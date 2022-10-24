@@ -43,11 +43,12 @@ jobs:
           context: ./backend
           file: ./backend/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/foodgarm-backend:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/foodgarm_backend:latest
 
   deploy:
     runs-on: ubuntu-latest
     needs: build_and_push_to_docker_hub
+    if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main'
     steps:
       - name: executing remote ssh commands to deploy
         uses: appleboy/ssh-action@master
@@ -56,8 +57,10 @@ jobs:
           username: ${{ secrets.USER }}
           key: ${{ secrets.SSH_KEY }}
           script: |
-            sudo docker pull ${{ secrets.DOCKER_USERNAME }}/foodgarm-frontend:v1.0.0
-            sudo docker pull ${{ secrets.DOCKER_USERNAME }}foodgarm-backend:latest
+            sudo docker pull ${{ secrets.DOCKER_USERNAME 
+            }}/foodgarm_frontend:v1.0.0
+            sudo docker pull ${{ secrets.DOCKER_USERNAME 
+            }}foodgarm_backend:latest
             sudo docker-compose stop
             sudo docker-compose rm backend
             rm .env
