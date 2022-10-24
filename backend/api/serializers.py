@@ -133,7 +133,8 @@ class CreateRecipeSerializer(serializers.ModelSerializer):
         cooking_time = data['cooking_time']
         if cooking_time < COOKING_TIME_MIN_VALUE:
             raise serializers.ValidationError(
-                'Минимальное время приготовление больше 1')
+                f'Минимальное время приготовление '
+                f'меньше {COOKING_TIME_MIN_VALUE}')
         if not ingredients:
             raise serializers.ValidationError(
                 'Нужен минимум один ингредиент для рецепта')
