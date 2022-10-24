@@ -68,5 +68,5 @@ class Follow(models.Model):
 
     def __str__(self):
         user = Follow.objects.get(user=self.user)
-        author = Follow.objects.get(user=author)
+        author = Follow.objects.get(user=self.author)
         return f'{user} подписался на {author}'
