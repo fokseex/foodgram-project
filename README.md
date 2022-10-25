@@ -97,7 +97,7 @@ sudo docker-compose up -d --build
     - Загрузите ингридиенты  в базу данных (необязательно):  
     *Если файл не указывать, по умолчанию выберется ingredients.json*
     ```
-    sudo docker-compose exec backend python manage.py load_ingredients <Название файла из директории data>
+    sudo docker-compose exec backend python manage.py parse_csv
     ```
     - Создать суперпользователя Django:
     ```
