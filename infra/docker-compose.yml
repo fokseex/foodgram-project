@@ -21,7 +21,7 @@ services:
     restart: always
 
   frontend:
-    image: fokseex/foodgram_frontend:v1.0.0
+    image: fokseex/foodgram-frontend:v1.0.0
     volumes:
       - ./frontend/:/app/result_build/
 
